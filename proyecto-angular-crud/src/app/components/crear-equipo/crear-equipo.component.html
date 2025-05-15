@@ -9,8 +9,8 @@
   <label>Estadio:</label>
   <input type="text" [(ngModel)]="estadioEquipo" name="estadio" required>
 
-  <label>Año de fundación:</label>
-  <input type="date" [(ngModel)]="fundadoEquipo" name="fundado" required>
+  <label>Año de fundación: (YYYY/MM/DD)</label>
+  <input type="text" [(ngModel)]="fundadoEquipo" name="fundado" required pattern="\d{4}/\d{2}/\d{2}" placeholder="YYYY/MM/DD">
 
   <button type="submit">Guardar equipo</button>
 </form>

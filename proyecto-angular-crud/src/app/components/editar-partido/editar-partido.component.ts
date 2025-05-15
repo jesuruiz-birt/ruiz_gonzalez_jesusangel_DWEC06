@@ -33,7 +33,7 @@ export class EditarPartidoComponent implements OnInit {
         this.equipoVisitante = partido.equipo_visitante;
         this.golesLocal = partido.goles_local;
         this.golesVisitante = partido.goles_visitante;
-        this.fecha = partido.fecha;
+        this.fecha = new Date(partido.fecha).toISOString().split('T')[0].replace(/-/g, "/");
       });
     });
 
