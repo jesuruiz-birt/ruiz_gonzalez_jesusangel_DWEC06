@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.editar-btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.editar-btn:hover {
+  background-color: #0b7dda;
+}
+
+.eliminar-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.eliminar-btn:hover {
+  background-color: #d32f2f;
+}

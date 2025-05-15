@@ -1,0 +1,23 @@
+<h2>Agregar partido</h2>
+<form (ngSubmit)="crearPartido()">
+  <label>Equipo Local:</label>
+  <select [(ngModel)]="equipoLocal" name="equipoLocal" required>
+    <option *ngFor="let equipo of equipos" [value]="equipo.name">{{ equipo.name }}</option> 
+  </select>
+
+  <label>Equipo Visitante:</label>
+  <select [(ngModel)]="equipoVisitante" name="equipoVisitante" required>
+    <option *ngFor="let equipo of equipos" [value]="equipo.name">{{ equipo.name }}</option>
+  </select>
+
+  <label>Goles Local:</label>
+  <input type="number" [(ngModel)]="golesLocal" name="golesLocal" required>
+
+  <label>Goles Visitante:</label>
+  <input type="number" [(ngModel)]="golesVisitante" name="golesVisitante" required>
+
+  <label>Fecha:</label>
+  <input type="text" [(ngModel)]="fecha" name="fecha" required placeholder="YYYY-MM-DD">
+
+  <button type="submit">Guardar Partido</button>
+</form>

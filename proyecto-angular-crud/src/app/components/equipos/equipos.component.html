@@ -1,0 +1,23 @@
+<h2>Equipos de Fútbol</h2>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>País</th>
+    <th>Fundado</th>
+    <th>Estadio</th>
+    <th>Acciones</th>
+  </tr>
+<tr *ngFor="let equipo of equipos">
+  <td>{{ equipo.id }}</td>
+  <td>{{ equipo.name }}</td>
+  <td>{{ equipo.pais }}</td>
+  <td>{{ equipo.fundado | date:'yyyy-MM-dd' }}</td>
+  <td>{{ equipo.estadio }}</td>
+  <td>
+    <button [routerLink]="['/editar-equipo', equipo.id]" class="editar-btn">Editar</button>
+    <button (click)="eliminarEquipo(equipo.id)" class="eliminar-btn">Eliminar</button>
+  </td>
+</tr>
+
+</table>

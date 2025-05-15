@@ -1,0 +1,19 @@
+<h2>Agregar Partido</h2>
+<form>
+  <label>Equipo Local:</label>
+  <input type="text" [(ngModel)]="equipoLocal" name="local" required>
+
+  <label>Equipo Visitante:</label>
+  <input type="text" [(ngModel)]="equipoVisitante" name="visitante" required>
+
+  <label>Goles Local:</label>
+  <input type="number" [(ngModel)]="golesLocal" name="golesLocal">
+
+  <label>Goles Visitante:</label>
+  <input type="number" [(ngModel)]="golesVisitante" name="golesVisitante">
+
+  <label>Fecha:</label>
+  <input type="date" [(ngModel)]="fecha" name="fecha">
+
+  <button type="submit">Guardar Partido</button>
+</form>

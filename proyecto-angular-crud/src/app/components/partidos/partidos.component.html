@@ -1,0 +1,40 @@
+<h2>Partidos</h2>
+<!-- 
+<table border="1">
+  <tr>
+    <th>Fecha</th>
+    <th>Local</th>
+    <th>Visitante</th>
+    <th>Resultado</th>
+  </tr>
+  <tr *ngFor="let partido of partidos">
+    <td>{{ partido.fecha }}</td>
+    <td>{{ partido.equipo_local }}</td>
+    <td>{{ partido.equipo_visitante }}</td>
+    <td>{{ partido.goles_local }} - {{ partido.goles_visitante }}</td>
+  </tr>
+</table>
+-->
+
+<table border="1">
+  <tr>
+    <th>Local</th>
+    <th>Visitante</th>
+    <th>Goles Local</th>
+    <th>Goles Visitante</th>
+    <th>Fecha</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let partido of partidos">
+    <td>{{ partido.equipo_local }}</td>
+    <td>{{ partido.equipo_visitante }}</td>
+    <td>{{ partido.goles_local }}</td>
+    <td>{{ partido.goles_visitante }}</td>
+    <td>{{ partido.fecha | date:'yyyy-MM-dd' }}</td>
+
+    <td>
+      <button [routerLink]="['/editar-partido', partido.id]" class="editar-btn">Editar</button>
+      <button (click)="eliminarPartido(partido.id)" class="eliminar-btn">Eliminar</button>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,16 @@
+<h2>Crear Nuevo Equipo</h2>
+<form (submit)="crearEquipo()">
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="nombreEquipo" name="nombre" required>
+
+  <label>País:</label>
+  <input type="text" [(ngModel)]="paisEquipo" name="pais" required>
+
+  <label>Estadio:</label>
+  <input type="text" [(ngModel)]="estadioEquipo" name="estadio" required>
+
+  <label>Año de fundación:</label>
+  <input type="date" [(ngModel)]="fundadoEquipo" name="fundado" required>
+
+  <button type="submit">Guardar equipo</button>
+</form>

@@ -1,0 +1,16 @@
+<h2>Editar Equipo</h2>
+<form (submit)="actualizarEquipo()">
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="nombreEquipo" name="nombre" required>
+
+  <label>País:</label>
+  <input type="text" [(ngModel)]="paisEquipo" name="pais" required>
+
+  <label>Estadio:</label>
+  <input type="text" [(ngModel)]="estadioEquipo" name="estadio" required>
+
+  <label>Fecha de fundación (YYYY/MM/DD):</label>
+  <input type="text" [(ngModel)]="fundadoEquipo" name="fundado" required pattern="\d{4}/\d{2}/\d{2}" placeholder="YYYY/MM/DD">
+
+  <button type="submit">Actualizar equipo</button>
+</form>
